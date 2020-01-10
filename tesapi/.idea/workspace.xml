@@ -113,7 +113,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/doutreluingne/dev/ApiFromVide" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -189,6 +189,7 @@
       <workItem from="1578600722369" duration="21000" />
       <workItem from="1578600744639" duration="496000" />
       <workItem from="1578641882570" duration="8241000" />
+      <workItem from="1578650752164" duration="1899000" />
     </task>
     <servers />
   </component>

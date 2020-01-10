@@ -19,16 +19,29 @@ class ConfigurationRepository extends ServiceEntityRepository
         parent::__construct($registry, Configuration::class);
     }
 
-    public function updateNombreAvis($nombre)
+    public function updateNombreAvis($nbcommentaire, $nbavis, $notemini)
     {
-        if (isset($nombre))
+        $config = $this->findById(1);
+        if ($nbcommentaire == "{nbcommentaire}" || $nbcommentaire == ",")
         {
-            $nombre = 3;
+            $nbcommentaire = $config[0]->getNbCommentaire();
+        }
+        if ($nbavis == "{nbavis}" || $nbavis == ",")
+        {
+            $nbavis = $config[0]->getNbAvis();
+        }
+        if ($notemini == "{notemini}" || $notemini == ",")
+        {
+            $notemini = $config[0]->getNoteMin();
         }
         return $this->createQueryBuilder('c')
             ->update(Configuration::class, 'c')
-            ->set('c.nb_avis', ':nombre')
-            ->setParameter('nombre', $nombre)
+            ->set('c.nb_commentaire', ':nbcommentaire')
+            ->set('c.nb_avis', ':nbavis')
+            ->set('c.note_min', ':notemini')
+            ->setParameter('nbcommentaire', $nbcommentaire)
+            ->setParameter('nbavis', $nbavis)
+            ->setParameter('notemini', $notemini)
             ->getQuery()
             ->getResult()
             ;

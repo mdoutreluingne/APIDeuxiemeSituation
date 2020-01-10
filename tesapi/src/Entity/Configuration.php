@@ -7,22 +7,36 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
- *      *     itemOperations={
+ *          itemOperations={
  *          "put",
- *          "changeNbAvis"={
+ *          "modifConfiguration"={
  *          "method"="PUT",
- *          "path"="/configuration/changeNbAvis/{nombre}",
+ *          "path"="/configuration/modifConfiguration/{nbcommentaire}/{nbavis}/{notemini}",
  *          "defaults"={"_api_receive"=false},
- *          "controller"=App\Controller\ModifNbAvis::class,
+ *          "controller"=App\Controller\ModifAvis::class,
  *          "openapi_context"={
  *              "operationId"="modifNbAvis",
  *              "parameters"={
  *                  {
- *                      "name"="nombre",
+ *                      "name"="nbcommentaire",
+ *                      "required"=false,
+ *                      "type"="int",
+ *                      "in"="path",
+ *                      "description"="le nombre de commentaire affiché aléatoirement"
+ *                  },
+ *                  {
+ *                      "name"="nbavis",
  *                      "required"=false,
  *                      "type"="int",
  *                      "in"="path",
  *                      "description"="le nombre d'avis affiché aléatoirement"
+ *                  },
+ *                  {
+ *                      "name"="notemini",
+ *                      "required"=false,
+ *                      "type"="int",
+ *                      "in"="path",
+ *                      "description"="la note minimale"
  *                  }
  *              },
  *              "produces"={
