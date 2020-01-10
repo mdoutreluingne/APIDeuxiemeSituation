@@ -41,6 +41,12 @@ class Image
      */
     private $partie;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Article")
+     * @ORM\JoinColumn(name="article_id", referencedColumnName="id", nullable=false)
+     */
+    private $article;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +96,18 @@ class Image
     public function setPartie(?Partie $partie): self
     {
         $this->partie = $partie;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Article
+    {
+        return $this->article;
+    }
+
+    public function setArticle(Article $article): self
+    {
+        $this->article = $article;
 
         return $this;
     }
