@@ -21,6 +21,10 @@ class ConfigurationRepository extends ServiceEntityRepository
 
     public function updateNombreAvis($nombre)
     {
+        if (isset($nombre))
+        {
+            $nombre = 3;
+        }
         return $this->createQueryBuilder('c')
             ->update(Configuration::class, 'c')
             ->set('c.nb_avis', ':nombre')

@@ -19,7 +19,7 @@ use Doctrine\ORM\Mapping as ORM;
  *              "parameters"={
  *                  {
  *                      "name"="nombre",
- *                      "required"=true,
+ *                      "required"=false,
  *                      "type"="int",
  *                      "in"="path",
  *                      "description"="le nombre d'avis affiché aléatoirement"

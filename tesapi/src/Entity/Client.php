@@ -31,6 +31,74 @@ use Doctrine\ORM\Mapping as ORM;
  *                  }
  *              }
  *          }
+ *     },
+ *     itemOperations={
+ *          "get",
+ *          "put",
+ *          "delete",
+ *          "modifClient"={
+ *              "method"="PUT",
+ *              "path"="/client/modifClient/{id}/{nom}/{prenom}/{ville}/{tel}/{mail}/{archive}",
+ *              "defaults"={"_api_receive"=false},
+ *              "controller"=App\Controller\ModifClient::class,
+ *             "openapi_context"={
+ *                  "operationId"="getByTheme",
+ *                  "parameters"={
+ *                     {
+ *                          "name"="id",
+ *                          "required"=true,
+ *                          "type"="int",
+ *                          "in"="path",
+ *                          "description"="id du client"
+ *                      },
+ *                      {
+ *                           "name"="nom",
+ *                          "required"=false,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="nom du client"
+ *                      },
+ *                      {
+ *                          "name"="prenom",
+ *                          "required"=false,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="prénom du client"
+ *                      },
+ *                      {
+ *                          "name"="ville",
+ *                          "required"=false,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="nom de la ville où habite le client"
+ *                      },
+ *                      {
+ *                          "name"="tel",
+ *                          "required"=false,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="numéro de téléphone du client"
+ *                      },
+ *                      {
+ *                          "name"="mail",
+ *                          "required"=false,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="e-mail du client"
+ *                      },
+ *                      {
+ *                          "name"="archive",
+ *                          "required"=false,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Le client est-il archivé"
+ *                      }
+ *                  },
+ *                  "produces"={
+ *                      "application/json"
+ *                  }
+ *              }
+ *          }
  *     }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
