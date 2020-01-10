@@ -132,9 +132,9 @@
       <command value="s make:controller" />
       <command value="s doctrine:schema:update" />
       <command value="s make:entity --api-resource " />
-      <command value="s doctrine:schema:update --force" />
-      <command value="s doctrine:schema:validate" />
       <command value="c update" />
+      <command value="s doctrine:schema:validate" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -190,6 +190,7 @@
       <workItem from="1578600744639" duration="496000" />
       <workItem from="1578641882570" duration="8241000" />
       <workItem from="1578650752164" duration="1899000" />
+      <workItem from="1578653056799" duration="590000" />
     </task>
     <servers />
   </component>
