@@ -19,6 +19,15 @@ class ActualiteRepository extends ServiceEntityRepository
         parent::__construct($registry, Actualite::class);
     }
 
+    public function addActu($titre, $paragraphe, $datedebut, $datefin, $image)
+    {
+        /*echo $titre . "\n\n";
+        $sql = "INSERT INTO actualite VALUES (:Titre, :Paragraphe, :Datedebut, :Datefin, :Image) ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array(':Titre'=>$titre, ':Paragraphe'=>$paragraphe, ':Datedebut'=>$datedebut, ':Datefin'=>$datefin, ':Image'=>$image));*/
+
+    }
+
     // /**
     //  * @return Actualite[] Returns an array of Actualite objects
     //  */

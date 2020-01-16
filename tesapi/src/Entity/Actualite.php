@@ -7,15 +7,15 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
- *      * collectionOperations={
+ *      collectionOperations={
  *      "post",
  *      "addActualite"={
  *          "method"="POST",
  *          "path"="/actualite/addActualite/{titre}/{paragraphe}/{dateDebut}/{dateFin}/{image}",
  *          "defaults"={"_api_receive"=false},
- *          "controller"=App\Controller\RecupAvisByTheme::class,
+ *          "controller"=App\Controller\AjoutActualite::class,
  *          "openapi_context"={
- *              "operationId"="getByTheme",
+ *              "operationId"="postActualite",
  *              "parameters"={
  *                  {
  *                      "name"="titre",
@@ -34,14 +34,14 @@ use Doctrine\ORM\Mapping as ORM;
  *                  {
  *                      "name"="dateDebut",
  *                      "required"=true,
- *                      "type"="datetime",
+ *                      "type"="date",
  *                      "in"="path",
  *                      "description"="date de début"
  *                  },
  *                  {
  *                      "name"="dateFin",
  *                      "required"=true,
- *                      "type"="datetime",
+ *                      "type"="date",
  *                      "in"="path",
  *                      "description"="date de fin"
  *                  },
