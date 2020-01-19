@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Actualite;
 use App\Operation\AddActualiteHandler;
 
 class AjoutActualite
@@ -16,8 +17,10 @@ class AjoutActualite
     {
         $this->recupHandler = $recupHandler;
     }
-    public function __invoke($titre, $paragraphe, $datedebut, $datefin, $image){
-        $entitie = $this->recupHandler->handle($titre, $paragraphe, $datedebut, $datefin, $image);
+    public function __invoke($titre, $paragraphe, $dateDebut , $dateFin , $image){
+        $dateDebut = new \DateTime($dateDebut);
+        $dateFin = new \DateTime($dateFin);
+        $entitie = $this->recupHandler->handle($titre, $paragraphe, $dateDebut, $dateFin, $image);
         return $entitie;
     }
 }

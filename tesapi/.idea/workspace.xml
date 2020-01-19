@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ModifNbAvis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/ModifNbAvisHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_08_01_2020_09_40_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_09_01_2020_21_12_c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_08_01_2020_09_42_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_09_01_2020_21_13_s.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_01_2020_08_39_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_19_01_2020_13_51_c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_10_01_2020_08_42_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_19_01_2020_13_53_s.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AjoutActualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AjoutActualite.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Actualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actualite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ConfigurationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ConfigurationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
@@ -113,7 +111,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/doutreluingne/dev/ApiFromVide" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ApiFromVide" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -132,9 +130,10 @@
       <command value="s make:controller" />
       <command value="s doctrine:schema:update" />
       <command value="s make:entity --api-resource " />
-      <command value="c update" />
-      <command value="s doctrine:schema:validate" />
       <command value="s doctrine:schema:update --force" />
+      <command value="c update" />
+      <command value="s doctrine:cache:clear-metadata" />
+      <command value="s doctrine:schema:validate" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -193,6 +192,7 @@
       <workItem from="1578653056799" duration="590000" />
       <workItem from="1579157409342" duration="592000" />
       <workItem from="1579158070901" duration="2000000" />
+      <workItem from="1579438230693" duration="5429000" />
     </task>
     <servers />
   </component>
