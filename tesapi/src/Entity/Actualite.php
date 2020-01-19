@@ -8,10 +8,11 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ApiResource(
  *      collectionOperations={
+ *      "get",
  *      "post",
  *      "addActualite"={
  *          "method"="POST",
- *          "path"="/actualite/addActualite/{titre}/{paragraphe}/{dateDebut}/{dateFin}/{image}",
+ *          "path"="/actualite/addActualite/{titre}/{paragraphe}/{image}/{dateDebut}/{dateFin}",
  *          "defaults"={"_api_receive"=false},
  *          "controller"=App\Controller\AjoutActualite::class,
  *          "openapi_context"={
