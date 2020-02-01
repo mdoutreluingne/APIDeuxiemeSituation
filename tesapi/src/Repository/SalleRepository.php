@@ -3,6 +3,8 @@
 namespace App\Repository;
 
 use App\Entity\Salle;
+use App\Entity\Theme;
+use App\Entity\Ville;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -19,6 +21,26 @@ class SalleRepository extends ServiceEntityRepository
         parent::__construct($registry, Salle::class);
     }
 
+    public function findSalles()
+    {
+        $sql = "select salle.id as salle_id, theme.nom as theme, ville.nom as ville from salle "
+            . "Join ville on ville.id = theme_id "
+            . "Join theme on theme.id = theme_id "
+            . "where salle.archive = 0 ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
+    public function CountSalles()
+    {
+        return $this->createQueryBuilder('s')
+            ->select('count(s.id)')
+            ->Where('s.archive = 0')
+            ->getQuery()
+            ->getSingleScalarResult()
+            ;
+    }
     // /**
     //  * @return Salle[] Returns an array of Salle objects
     //  */

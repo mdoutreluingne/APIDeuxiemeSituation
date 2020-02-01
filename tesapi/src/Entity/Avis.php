@@ -51,7 +51,31 @@ use Doctrine\ORM\Mapping as ORM;
  *                  "application/json"
  *              }
  *          }
- *      }
+ *      },
+ *     "allAvis"={
+ *          "method"="GET",
+ *          "path"="/avis/allAvis",
+ *          "defaults"={"_api_receive"=false},
+ *          "controller"=App\Controller\RecupLesAvis::class,
+ *          "openapi_context"={
+ *              "operationId"="getAllAvis",
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *      },
+ *     "countAvis"={
+ *              "method"="GET",
+ *              "path"="/avis/countAvis",
+ *              "defaults"={"_api_receive"=false},
+ *              "controller"=App\Controller\RecupCountAvis::class,
+ *             "openapi_context"={
+ *                  "operationId"="getCountAvis",
+ *                  "produces"={
+ *                      "application/json"
+ *                  }
+ *              }
+ *          }
  *   }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\AvisRepository")

@@ -7,44 +7,49 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
- *          itemOperations={
+ *     attributes={"pagination_enabled"=false},
+ *        itemOperations={
+ *          "get",
  *          "put",
  *          "modifConfiguration"={
- *          "method"="PUT",
- *          "path"="/configuration/modifConfiguration/{nbcommentaire}/{nbavis}/{notemini}",
- *          "defaults"={"_api_receive"=false},
- *          "controller"=App\Controller\ModifAvis::class,
- *          "openapi_context"={
- *              "operationId"="modifNbAvis",
- *              "parameters"={
- *                  {
- *                      "name"="nbcommentaire",
- *                      "required"=false,
- *                      "type"="int",
- *                      "in"="path",
- *                      "description"="le nombre de commentaire affiché aléatoirement"
+ *              "method"="PUT",
+ *              "path"="/configuration/modifConfiguration/{nbcommentaire}/{nbavis}/{notemini}",
+ *              "defaults"={"_api_receive"=false},
+ *              "controller"=App\Controller\ModifAvis::class,
+ *              "openapi_context"={
+ *                  "operationId"="modifNbAvis",
+ *                  "parameters"={
+ *                      {
+ *                          "name"="nbcommentaire",
+ *                          "required"=false,
+ *                          "type"="int",
+ *                          "in"="path",
+ *                          "description"="le nombre de commentaire affiché aléatoirement"
+ *                      },
+ *                      {
+ *                          "name"="nbavis",
+ *                          "required"=false,
+ *                          "type"="int",
+ *                          "in"="path",
+ *                          "description"="le nombre d'avis affiché aléatoirement"
+ *                      },
+ *                      {
+ *                          "name"="notemini",
+ *                          "required"=false,
+ *                          "type"="int",
+ *                          "in"="path",
+ *                          "description"="la note minimale"
+ *                      }
  *                  },
- *                  {
- *                      "name"="nbavis",
- *                      "required"=false,
- *                      "type"="int",
- *                      "in"="path",
- *                      "description"="le nombre d'avis affiché aléatoirement"
- *                  },
- *                  {
- *                      "name"="notemini",
- *                      "required"=false,
- *                      "type"="int",
- *                      "in"="path",
- *                      "description"="la note minimale"
+ *                  "produces"={
+ *                      "application/json"
  *                  }
- *              },
- *              "produces"={
- *                  "application/json"
  *              }
  *          }
- *      }
- *    }
+ *    },
+ *    collectionOperations={
+ *      "get",
+ *     }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ConfigurationRepository")
  */
