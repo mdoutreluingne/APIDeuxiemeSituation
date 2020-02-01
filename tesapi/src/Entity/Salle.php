@@ -6,7 +6,35 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *    collectionOperations={
+ *      "get",
+ *      "salles"={
+ *          "method"="GET",
+ *          "path"="/salle/salles",
+ *          "defaults"={"_api_receive"=false},
+ *          "controller"=App\Controller\RecupSalle::class,
+ *          "openapi_context"={
+ *              "operationId"="getSalles",
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *      },
+ *     "countSalle"={
+ *          "method"="GET",
+ *          "path"="/salles/countSalle",
+ *          "defaults"={"_api_receive"=true},
+ *          "controller"=App\Controller\RecupCountSalle::class,
+ *          "openapi_context"={
+ *
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *      }
+ *    }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\SalleRepository")
  */
 class Salle

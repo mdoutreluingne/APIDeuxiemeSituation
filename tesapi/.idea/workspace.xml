@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_01_2020_08_39_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_19_01_2020_13_51_c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_10_01_2020_08_42_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_19_01_2020_13_53_s.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountAvis.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountSalle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupLesAvis.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupSalle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountAvisHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountSalleHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupLesAvisHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupSalleHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AjoutActualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AjoutActualite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Actualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actualite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Avis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Avis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Configuration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Salle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Salle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AvisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AvisRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/SalleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/SalleRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +200,19 @@
       <workItem from="1579157409342" duration="592000" />
       <workItem from="1579158070901" duration="2000000" />
       <workItem from="1579438230693" duration="5429000" />
+      <workItem from="1579965014956" duration="674000" />
+      <workItem from="1579969107458" duration="701000" />
+      <workItem from="1579981230139" duration="2895000" />
+      <workItem from="1580026133103" duration="2243000" />
+      <workItem from="1580044943796" duration="1587000" />
+      <workItem from="1580052868189" duration="17000" />
+      <workItem from="1580052999385" duration="1490000" />
+      <workItem from="1580230182425" duration="622000" />
+      <workItem from="1580314951209" duration="2795000" />
+      <workItem from="1580403043748" duration="635000" />
+      <workItem from="1580545321231" duration="3971000" />
+      <workItem from="1580561780011" duration="616000" />
+      <workItem from="1580570474363" duration="652000" />
     </task>
     <servers />
   </component>

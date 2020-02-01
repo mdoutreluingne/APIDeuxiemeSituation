@@ -30,6 +30,25 @@ class AvisRepository extends ServiceEntityRepository
             ;
     }
 
+    public function findAllAvis()
+    {
+        $sql = "select avis.id, note, commentaire, theme.nom as theme from avis "
+            . "Join salle on salle.id = salle_id "
+            . "Join theme on theme.id = theme_id ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
+    public function CountAvis()
+    {
+        return $this->createQueryBuilder('a')
+            ->select('count(a.id)')
+            ->getQuery()
+            ->getSingleScalarResult()
+            ;
+    }
+
     // /**
     //  * @return Avis[] Returns an array of Avis objects
     //  */
