@@ -19,6 +19,16 @@ class ThemeRepository extends ServiceEntityRepository
         parent::__construct($registry, Theme::class);
     }
 
+    public function findThemes()
+    {
+        $sql = "select theme.id as id, theme.nom as nom from salle "
+            . "Join theme on theme.id = theme_id "
+            . "where salle.archive = 0 ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
     // /**
     //  * @return Theme[] Returns an array of Theme objects
     //  */
