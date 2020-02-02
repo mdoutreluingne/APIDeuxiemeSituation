@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
+ *    attributes={"pagination_enabled"=false},
  *    collectionOperations={
  *      "get",
  *      "salles"={
@@ -27,7 +28,6 @@ use Doctrine\ORM\Mapping as ORM;
  *          "defaults"={"_api_receive"=true},
  *          "controller"=App\Controller\RecupCountSalle::class,
  *          "openapi_context"={
- *
  *              "produces"={
  *                  "application/json"
  *              }

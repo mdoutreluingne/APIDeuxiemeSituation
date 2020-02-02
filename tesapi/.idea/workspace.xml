@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountAvis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountSalle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupLesAvis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupSalle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountAvisHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountSalleHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupLesAvisHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupSalleHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Avis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Avis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Configuration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Salle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Salle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AvisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AvisRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/SalleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/SalleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Theme.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,6 +201,8 @@
       <workItem from="1580545321231" duration="3971000" />
       <workItem from="1580561780011" duration="616000" />
       <workItem from="1580570474363" duration="652000" />
+      <workItem from="1580573874175" duration="508000" />
+      <workItem from="1580631679514" duration="3641000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
+ *     attributes={"pagination_enabled"=false},
  *     itemOperations={
  *        "get"
  *     }
