@@ -8,9 +8,22 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ApiResource(
  *     attributes={"pagination_enabled"=false},
- *     itemOperations={
- *        "get"
- *     }
+ *     attributes={"pagination_enabled"=false},
+ *    collectionOperations={
+ *      "get",
+ *      "lesThemes"={
+ *          "method"="GET",
+ *          "path"="/themes/lesThemes",
+ *          "defaults"={"_api_receive"=false},
+ *          "controller"=App\Controller\RecupThemes::class,
+ *          "openapi_context"={
+ *              "operationId"="getlesThemes",
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *      }
+ *    }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ThemeRepository")
  */
