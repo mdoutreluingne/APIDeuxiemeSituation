@@ -19,15 +19,18 @@ class AvisRepository extends ServiceEntityRepository
         parent::__construct($registry, Avis::class);
     }
 
-    public function findTauxSatisfactionByTheme($salle)
+    public function findTauxSatisfactionByTheme()
     {
-        return $this->createQueryBuilder('a')
-            ->select('(AVG(a.note)/MAX(a.note)*100)')
-            ->Where('a.salle = :salle')
-            ->setParameter('salle', $salle)
-            ->getQuery()
-            ->getResult()
-            ;
+
+        $sql = "select (AVG(avis.note)/MAX(avis.note)*100) as taux from avis "
+            . "Join salle on salle.id = salle_id "
+            . "Join theme on theme.id = theme_id "
+            . "where salle.archive = 0 "
+            . "group by theme.nom "
+            . "order by theme.nom ASC ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
     }
 
     public function findAllAvis()
