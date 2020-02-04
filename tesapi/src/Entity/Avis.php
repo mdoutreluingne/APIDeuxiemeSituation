@@ -33,20 +33,11 @@ use Doctrine\ORM\Mapping as ORM;
  *      },
  *     "byTauxSatisfaction"={
  *          "method"="GET",
- *          "path"="/avis/byTauxSatisfaction/{theme}",
+ *          "path"="/avis/byTauxSatisfaction",
  *          "defaults"={"_api_receive"=false},
  *          "controller"=App\Controller\RecupTauxSatisfactionByTheme::class,
  *          "openapi_context"={
- *              "operationId"="getByTheme",
- *              "parameters"={
- *                  {
- *                      "name"="theme",
- *                      "required"=true,
- *                      "type"="string",
- *                      "in"="path",
- *                      "description"="nom du theme de la salle"
- *                  }
- *              },
+ *              "operationId"="getTauxSatisfaction",
  *              "produces"={
  *                  "application/json"
  *              }

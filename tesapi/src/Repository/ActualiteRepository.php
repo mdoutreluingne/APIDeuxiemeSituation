@@ -21,6 +21,7 @@ class ActualiteRepository extends ServiceEntityRepository
 
     public function addActu($titre, $paragraphe, $datedebut, $datefin, $image)
     {
+        $image = str_replace(',', '.', "$image");
         $sql = "INSERT INTO actualite VALUES (null, :Titre, :Paragraphe, :Datedebut, :Datefin, :Image) ";
         $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
         return $stmt->execute(array(':Titre'=>$titre, ':Paragraphe'=>$paragraphe, ':Datedebut'=>$datedebut->format('Y-m-d H:i:s'), ':Datefin'=>$datefin->format('Y-m-d H:i:s'), ':Image'=>$image));

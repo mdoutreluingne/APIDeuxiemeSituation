@@ -16,8 +16,8 @@ class RecupTauxSatisfactionByTheme
     {
         $this->recupHandler = $recupHandler;
     }
-    public function __invoke($theme){
-        $entitie = $this->recupHandler->handle($theme);
+    public function __invoke(){
+        $entitie = $this->recupHandler->handle();
         return $entitie;
     }
 }

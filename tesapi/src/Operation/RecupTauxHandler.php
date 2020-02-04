@@ -15,9 +15,7 @@ class RecupTauxHandler
     {
         $this->em = $em;
     }
-    public function handle($theme){
-        $thetheme = $this->em->getRepository('App:Theme')->findOneByNom($theme);
-        $thesalle = $this->em->getRepository('App:Salle')->findOneBytheme($thetheme);
-        return $this->em->getRepository('App:Avis')->findTauxSatisfactionByTheme($thesalle);
+    public function handle(){
+        return $this->em->getRepository('App:Avis')->findTauxSatisfactionByTheme();
     }
 }

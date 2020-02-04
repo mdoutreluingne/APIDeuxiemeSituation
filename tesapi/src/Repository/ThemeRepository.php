@@ -23,7 +23,8 @@ class ThemeRepository extends ServiceEntityRepository
     {
         $sql = "select theme.id as id, theme.nom as nom from salle "
             . "Join theme on theme.id = theme_id "
-            . "where salle.archive = 0 ";
+            . "where salle.archive = 0 "
+            . "order by theme.nom ASC ";
         $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
         $stmt->execute(array());
         return $stmt->fetchAll();
