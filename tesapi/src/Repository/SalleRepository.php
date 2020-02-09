@@ -23,10 +23,12 @@ class SalleRepository extends ServiceEntityRepository
 
     public function findSalles()
     {
-        $sql = "select salle.id as salle_id, theme.nom as theme, ville.nom as ville from salle "
+        $sql = "select salle.id as salle_id, theme.nom as theme, ville.nom as ville, image.nom as image from salle "
             . "Join ville on ville.id = theme_id "
             . "Join theme on theme.id = theme_id "
-            . "where salle.archive = 0 ";
+            . "Join image on image.id = salle.id "
+            . "where salle.archive = 0 "
+            . "order by theme.nom ASC ";
         $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
         $stmt->execute(array());
         return $stmt->fetchAll();
