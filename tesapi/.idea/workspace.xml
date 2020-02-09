@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecupTauxSatisfactionByTheme.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecupTauxSatisfactionByTheme.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Avis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Avis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Operation/RecupTauxHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operation/RecupTauxHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AvisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AvisRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ThemeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ThemeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Salle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Salle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,6 +208,14 @@
       <workItem from="1580671123003" duration="805000" />
       <workItem from="1580749546252" duration="2048000" />
       <workItem from="1580835529579" duration="1063000" />
+      <workItem from="1580836888470" duration="98000" />
+      <workItem from="1580921156484" duration="1415000" />
+      <workItem from="1580924700089" duration="638000" />
+      <workItem from="1581007643652" duration="831000" />
+      <workItem from="1581148591206" duration="1277000" />
+      <workItem from="1581169033737" duration="673000" />
+      <workItem from="1581174563030" duration="931000" />
+      <workItem from="1581235473770" duration="3272000" />
     </task>
     <servers />
   </component>

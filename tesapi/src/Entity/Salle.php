@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  *      "get",
  *      "salles"={
  *          "method"="GET",
- *          "path"="/salle/salles",
+ *          "path"="/salles/lesSalles",
  *          "defaults"={"_api_receive"=false},
  *          "controller"=App\Controller\RecupSalle::class,
  *          "openapi_context"={
