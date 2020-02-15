@@ -6,7 +6,36 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *    attributes={"pagination_enabled"=false},
+ *    collectionOperations={
+ *      "get",
+ *      "getImagesSalle"={
+ *          "method"="GET",
+ *          "path"="/themes/getImagesSalle",
+ *          "defaults"={"_api_receive"=false},
+ *          "controller"=App\Controller\RecupImagesSalle::class,
+ *          "openapi_context"={
+ *              "operationId"="getImagesSalle",
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *       },
+ *      "countPhotos"={
+ *              "method"="GET",
+ *              "path"="/images/countPhotos",
+ *              "defaults"={"_api_receive"=false},
+ *              "controller"=App\Controller\RecupCountPhotos::class,
+ *             "openapi_context"={
+ *                  "operationId"="getcountPhotos",
+ *                  "produces"={
+ *                      "application/json"
+ *                  }
+ *              }
+ *        }
+ *    }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
  */
 class Image

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountPhotos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupImagesSalle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountPhotosHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupImagesSalleHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/SalleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/SalleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ImageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ImageRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +110,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ApiFromVide" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -217,6 +222,10 @@
       <workItem from="1581174563030" duration="931000" />
       <workItem from="1581235473770" duration="3272000" />
       <workItem from="1581261827400" duration="1161000" />
+      <workItem from="1581354981448" duration="20000" />
+      <workItem from="1581667256144" duration="21000" />
+      <workItem from="1581774000210" duration="1232000" />
+      <workItem from="1581779669644" duration="4257000" />
     </task>
     <servers />
   </component>
