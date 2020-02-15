@@ -19,6 +19,24 @@ class ImageRepository extends ServiceEntityRepository
         parent::__construct($registry, Image::class);
     }
 
+    public function findImagesSalle()
+    {
+        $sql = "select nom from image "
+            . "where partie_id is not null and article_id is null ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
+    public function CountPhotos()
+    {
+        $sql = "select Count(nom) as nbPhotos from image "
+            . "where partie_id is not null and article_id is null ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
     // /**
     //  * @return Image[] Returns an array of Image objects
     //  */
