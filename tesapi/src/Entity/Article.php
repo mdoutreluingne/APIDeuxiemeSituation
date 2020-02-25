@@ -6,7 +6,24 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *    attributes={"pagination_enabled"=false},
+ *    collectionOperations={
+ *      "get",
+ *      "lesArticles"={
+ *          "method"="GET",
+ *          "path"="/articles/lesArticles",
+ *          "defaults"={"_api_receive"=false},
+ *          "controller"=App\Controller\RecupArticles::class,
+ *          "openapi_context"={
+ *              "operationId"="getArticles",
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *      }
+ *    }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  */
 class Article

@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  *      "post",
  *      "addActualite"={
  *          "method"="POST",
- *          "path"="/actualite/addActualite/{titre}/{paragraphe}/{image}/{dateDebut}/{dateFin}",
+ *          "path"="/actualites/addActualite/{titre}/{paragraphe}/{image}/{dateDebut}/{dateFin}",
  *          "defaults"={"_api_receive"=false},
  *          "controller"=App\Controller\AjoutActualite::class,
  *          "openapi_context"={
@@ -54,6 +54,17 @@ use Doctrine\ORM\Mapping as ORM;
  *                      "description"="l'image"
  *                  }
  *              },
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *      },
+ *     "countActualite"={
+ *          "method"="GET",
+ *          "path"="/actualites/countActualite",
+ *          "defaults"={"_api_receive"=true},
+ *          "controller"=App\Controller\RecupCountActualite::class,
+ *          "openapi_context"={
  *              "produces"={
  *                  "application/json"
  *              }

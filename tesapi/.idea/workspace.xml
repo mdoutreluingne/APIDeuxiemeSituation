@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountPhotos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupImagesSalle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountPhotosHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupImagesSalleHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupArticles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountActualite.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupArticlesHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountActualiteHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ImageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ImageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Actualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actualite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,6 +228,12 @@
       <workItem from="1581667256144" duration="21000" />
       <workItem from="1581774000210" duration="1232000" />
       <workItem from="1581779669644" duration="4257000" />
+      <workItem from="1581841423411" duration="1248000" />
+      <workItem from="1581860018938" duration="1247000" />
+      <workItem from="1581866890324" duration="2012000" />
+      <workItem from="1581958745887" duration="17000" />
+      <workItem from="1582530733512" duration="1860000" />
+      <workItem from="1582619883778" duration="2840000" />
     </task>
     <servers />
   </component>

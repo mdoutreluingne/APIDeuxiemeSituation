@@ -28,6 +28,15 @@ class ActualiteRepository extends ServiceEntityRepository
 
     }
 
+    public function CountActualite()
+    {
+        return $this->createQueryBuilder('a')
+            ->select('count(a.id)')
+            ->getQuery()
+            ->getSingleScalarResult()
+            ;
+    }
+
     // /**
     //  * @return Actualite[] Returns an array of Actualite objects
     //  */

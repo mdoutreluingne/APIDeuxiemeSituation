@@ -19,6 +19,16 @@ class ArticleRepository extends ServiceEntityRepository
         parent::__construct($registry, Article::class);
     }
 
+    public function findArticles()
+    {
+        $sql = "select libelle, montant, image.nom as image from article "
+            . "Join image on image.article_id = article.id "
+            . "where libelle = 'Zombie' OR libelle = 'Corde' OR libelle = 'Saut de haie' OR libelle = 'mannequin alien' OR libelle = 'ordinateur infectee' OR libelle = 'casse tete' ";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */
