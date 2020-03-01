@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupArticles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RecupCountActualite.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupArticlesHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operation/RecupCountActualiteHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Actualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actualite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualiteRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AjoutActualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AjoutActualite.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -234,6 +227,20 @@
       <workItem from="1581958745887" duration="17000" />
       <workItem from="1582530733512" duration="1860000" />
       <workItem from="1582619883778" duration="2840000" />
+      <workItem from="1582637524100" duration="674000" />
+      <workItem from="1582645982222" duration="1230000" />
+      <workItem from="1582708785435" duration="1794000" />
+      <workItem from="1582722470206" duration="721000" />
+      <workItem from="1582730999936" duration="652000" />
+      <workItem from="1582794428225" duration="830000" />
+      <workItem from="1582809353998" duration="682000" />
+      <workItem from="1582817411645" duration="621000" />
+      <workItem from="1582878389347" duration="2583000" />
+      <workItem from="1582906704235" duration="885000" />
+      <workItem from="1582965567920" duration="906000" />
+      <workItem from="1582968130308" duration="1163000" />
+      <workItem from="1582989536052" duration="1668000" />
+      <workItem from="1583051208728" duration="2085000" />
     </task>
     <servers />
   </component>
