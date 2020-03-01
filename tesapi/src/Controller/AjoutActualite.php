@@ -20,6 +20,8 @@ class AjoutActualite
     public function __invoke($titre, $paragraphe, $dateDebut , $dateFin , $image){
         $dateDebut = new \DateTime($dateDebut);
         $dateFin = new \DateTime($dateFin);
+        $titre = str_replace("%", " ", $titre);
+        $paragraphe = str_replace("%", " ", $paragraphe);
         $entitie = $this->recupHandler->handle($titre, $paragraphe, $dateDebut, $dateFin, $image);
         return $entitie;
     }
