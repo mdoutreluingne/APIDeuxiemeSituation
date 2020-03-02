@@ -23,7 +23,9 @@ class ArticleRepository extends ServiceEntityRepository
     {
         $sql = "select libelle, montant, image.nom as image from article "
             . "Join image on image.article_id = article.id "
-            . "where libelle = 'Zombie' OR libelle = 'Corde' OR libelle = 'Saut de haie' OR libelle = 'mannequin alien' OR libelle = 'ordinateur infectee' OR libelle = 'casse tete' ";
+            . "group by libelle "
+            . "order by libelle ASC ";
+
         $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
         $stmt->execute(array());
         return $stmt->fetchAll();
