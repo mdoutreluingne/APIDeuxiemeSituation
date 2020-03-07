@@ -30,6 +30,62 @@ use Doctrine\ORM\Mapping as ORM;
  *                      "application/json"
  *                  }
  *              }
+ *          },
+ *          "addClient"={
+ *              "method"="POST",
+ *              "path"="/client/addClient/{nom}/{prenom}/{ville}/{tel}/{mail}/{archive}",
+ *              "defaults"={"_api_receive"=false},
+ *              "controller"=App\Controller\AjoutClient::class,
+ *              "openapi_context"={
+ *                  "operationId"="postClient",
+ *                  "parameters"={
+ *                      {
+ *                          "name"="nom",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Nom du client"
+ *                      },
+ *                      {
+ *                          "name"="prenom",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Prénom du client"
+ *                      },
+ *                      {
+ *                          "name"="ville",
+ *                          "required"=true,
+ *                          "type"="date",
+ *                          "in"="path",
+ *                          "description"="Ville du client"
+ *                      },
+ *                      {
+ *                          "name"="tel",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Téléphone du client"
+ *                      },
+ *                      {
+ *                          "name"="mail",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Mail du client"
+ *                      },
+ *                      {
+ *                          "name"="archive",
+ *                          "required"=true,
+ *                          "type"="bool",
+ *                          "in"="path",
+ *                          "description"="Le client est archivé ou non"
+ *                      }
+ *                  },
+ *                  "produces"={
+ *                      "application/json"
+ *                  }
+ *              }
  *          }
  *     },
  *     itemOperations={

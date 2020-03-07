@@ -6,7 +6,33 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={"pagination_enabled"=false},
+ *     collectionOperations={
+ *      "get",
+ *      "obstacleByIdReservation"={
+ *          "method"="GET",
+ *          "path"="/obstacle/obstacleByIdReservation/{id}",
+ *          "defaults"={"_api_receive"=false},
+ *          "controller"=App\Controller\RecupObstacleByIdReservation::class,
+ *          "openapi_context"={
+ *              "operationId"="obstacleByIdReservation",
+ *              "parameters"={
+ *                  {
+ *                      "name"="id",
+ *                      "required"=true,
+ *                      "type"="int",
+ *                      "in"="path",
+ *                      "description"="id de la réservation"
+ *                  }
+ *              },
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *      }
+ *     }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ObstacleRepository")
  */
 class Obstacle

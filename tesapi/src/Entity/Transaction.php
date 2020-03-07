@@ -30,7 +30,70 @@ use Doctrine\ORM\Mapping as ORM;
  *                  "application/json"
  *              }
  *          }
- *      }
+ *      },
+ *      "addTransaction"={
+ *          "method"="POST",
+ *          "path"="/transaction/addTransaction/{date}/{montant}/{type}/{numero}/{commentaire}/{reservation}/{client}",
+ *          "defaults"={"_api_receive"=false},
+ *          "controller"=App\Controller\AjoutTransaction::class,
+ *          "openapi_context"={
+ *               "operationId"="postTransaction",
+ *               "parameters"={
+ *                  {
+ *                      "name"="date",
+ *                      "required"=true,
+ *                      "type"="date",
+ *                      "in"="path",
+ *                      "description"="Date de la transaction"
+ *                  },
+ *                  {
+ *                      "name"="montant",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Montant de la transaction"
+ *                  },
+ *                  {
+ *                      "name"="type",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Type de la transaction"
+ *                  },
+ *                  {
+ *                      "name"="numero",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Numéro de la transaction"
+ *                  },
+ *                  {
+ *                      "name"="commentaire",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Commentaire de la transaction"
+ *                  },
+ *                   {
+ *                      "name"="reservation",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Réservation de la transaction"
+ *                  },
+ *                  {
+ *                      "name"="client",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Client de la transaction"
+ *                  }
+ *              },
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
+ *        }
  *     }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\TransactionRepository")

@@ -24,55 +24,59 @@ class ClientRepository extends ServiceEntityRepository
 
     public function findSolde($id)
     {
-        return $this->createQueryBuilder('c')
-            ->select('SUM(t.montant)')
-            ->from(Transaction::class , 't')
-            ->Where('t.client = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getResult()
-            ;
+        $sql = "SELECT SUM(montant) as 'solde' FROM transaction WHERE client_id = " . $id;
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return ($stmt->fetchall())[0]["solde"];
+    }
+
+    public function addClient($nom, $prenom, $ville, $tel, $mail, $archive){
+        $sql = "SELECT id FROM ville WHERE nom = '".$ville."';";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        $ville = $stmt->fetchall();
+
+        $sql = "INSERT INTO client VALUES (null, :Nom, :Prenom, :Ville, :Tel, :Mail, :Archive)";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array(
+            ':Nom'=>$nom,
+            ':Prenom'=>$prenom,
+            ':Ville'=>$ville[0]["id"],
+            ':Tel'=>$tel,
+            ':Mail'=>$mail,
+            ':Archive'=>$archive
+        ));
+        $sql = "SELECT MAX(id) as 'lastId' FROM client";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return ($stmt->fetchall())[0]["lastId"];
     }
 
     public function updateClient($id, $nom, $prenom, $ville, $tel, $mail, $archive)
     {
         $client = $this->findById($id);
-        if ($nom == "{nom}" || $nom == ",")
-        {
+        if ($nom == "{nom}" || $nom == ",") {
             $nom = $client[0]->getNom();
         }
-        if ($prenom == "{prenom}" || $prenom == ",")
-        {
+        if ($prenom == "{prenom}" || $prenom == ",") {
             $prenom = $client[0]->getPrenom();
         }
-        if ($ville == "{ville}" || $ville == ",")
-        {
+        if ($ville == "{ville}" || $ville == ",") {
             $ville = $client[0]->getVille()->getId();
-        }
-        else
-        {
+        } else {
            $ville = $this->_em->getRepository('App:Ville')->findByNom($ville);
            $ville = $ville[0]->getId();
         }
-        if ($tel == "{tel}" || $tel == ",")
-        {
+        if ($tel == "{tel}" || $tel == ",") {
             $tel = $client[0]->getTel();
         }
-        if ($mail == "{mail}" || $mail == ",")
-        {
+        if ($mail == "{mail}" || $mail == ",") {
             $mail = $client[0]->getMail();
+        } elseif(strpos($mail, ",")){
+            $mail = str_replace(",",".",$mail);
         }
-        if ($archive == "{archive}" || $archive == ",")
-        {
+        if ($archive == "{archive}" || $archive == ",") {
             $archive = $client[0]->getArchive();
-            if (!$archive)
-            {
-                $archive = 0;
-            }
-            else
-            {
-                $archive = 1;
-            }
         }
         return $this->createQueryBuilder('c')
             ->update(Client::class, 'c')

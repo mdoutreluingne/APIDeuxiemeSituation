@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b881601-f2b3-40c4-a0a1-0939ffac623e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AjoutClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AjoutTransaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/GetArticleById.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RecupObstacleByIdReservation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/AjoutClientHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/AjoutTransactionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/ArticleByIdHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation/RecupObstacleHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_19_01_2020_13_51_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_02_03_2020_20_09_c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_19_01_2020_13_53_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_02_03_2020_20_10_S.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tesapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tesapi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Obstacle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Obstacle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Transaction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ClientRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ClientRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TransactionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TransactionRepository.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +36,24 @@
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="24b76fc9-eb68-4cc4-86fc-88929fd93a94" />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3.5">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
@@ -95,11 +128,17 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VQqnzetbilZTdnE1USH8svvPJm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -115,6 +154,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexis\Documents\Developpement\PPE\DeuxiemeSituation\APIDeuxiemeSituation\tesapi\src\Operation" />
+      <recent name="C:\Users\Alexis\Documents\Developpement\PPE\DeuxiemeSituation\APIDeuxiemeSituation\tesapi\src\Controller" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="c require api" />
@@ -125,27 +170,27 @@
       <command value="s doctrine:schema:update" />
       <command value="s make:entity --api-resource " />
       <command value="s doctrine:schema:update --force" />
-      <command value="c update" />
       <command value="s doctrine:cache:clear-metadata" />
       <command value="s doctrine:schema:validate" />
-    </option>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+      <command value="c update" />
     </option>
   </component>
   <component name="RunManager">
     <configuration name="server" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/public" port="8080">
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -245,6 +290,13 @@
       <workItem from="1583143904286" duration="1162000" />
       <workItem from="1583154560229" duration="651000" />
       <workItem from="1583162602489" duration="2362000" />
+      <workItem from="1583176116466" duration="2564000" />
+      <workItem from="1583231814313" duration="3529000" />
+      <workItem from="1583259175615" duration="4978000" />
+      <workItem from="1583318780042" duration="2898000" />
+      <workItem from="1583423784280" duration="725000" />
+      <workItem from="1583428434966" duration="5097000" />
+      <workItem from="1583572830593" duration="2563000" />
     </task>
     <servers />
   </component>
@@ -266,5 +318,71 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="120" key="#Inspections" timestamp="1583430441489">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="446" y="120" key="#Inspections/0.0.1707.920@0.0.1707.920" timestamp="1583430441489" />
+    <state x="562" y="53" key="#PHP" timestamp="1583176448442">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="562" y="53" key="#PHP/0.0.1707.920@0.0.1707.920" timestamp="1583176448442" />
+    <state x="446" y="120" key="#SQL_Dialects" timestamp="1583320468439">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="446" y="120" key="#SQL_Dialects/0.0.1707.920@0.0.1707.920" timestamp="1583320468439" />
+    <state x="309" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583320475618">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="309" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1583320475618" />
+    <state x="577" y="340" key="ComposerCompositePathDialog" timestamp="1583176163155">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="577" y="340" key="ComposerCompositePathDialog/0.0.1707.920@0.0.1707.920" timestamp="1583176163155" />
+    <state x="633" y="203" key="FileChooserDialogImpl" timestamp="1583176203471">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="633" y="203" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1583176203471" />
+    <state width="1663" height="305" key="GridCell.Tab.0.bottom" timestamp="1583576291865">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="305" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1583576291865" />
+    <state width="1663" height="305" key="GridCell.Tab.0.center" timestamp="1583576291865">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="305" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1583576291865" />
+    <state width="1663" height="305" key="GridCell.Tab.0.left" timestamp="1583576291865">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="305" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1583576291865" />
+    <state width="1663" height="305" key="GridCell.Tab.0.right" timestamp="1583576291865">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="305" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1583576291865" />
+    <state x="521" y="313" key="NewPhpClassDialog" timestamp="1583320195834">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="521" y="313" key="NewPhpClassDialog/0.0.1707.920@0.0.1707.920" timestamp="1583320195834" />
+    <state x="690" y="385" key="NewPhpFileDialog" timestamp="1583235444854">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="690" y="385" key="NewPhpFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1583235444854" />
+    <state x="355" y="104" key="SettingsEditor" timestamp="1583176226857">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="355" y="104" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1583176226857" />
+    <state x="611" y="307" key="SymfonyComponentCompositeDataDialog" timestamp="1583176204834">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="611" y="307" key="SymfonyComponentCompositeDataDialog/0.0.1707.920@0.0.1707.920" timestamp="1583176204834" />
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1583572831206">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1583572831206" />
+    <state x="510" y="211" width="672" height="677" key="run.anything.popup" timestamp="1583176363658">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="510" y="211" width="672" height="677" key="run.anything.popup/0.0.1707.920@0.0.1707.920" timestamp="1583176363658" />
   </component>
 </project>

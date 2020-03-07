@@ -19,6 +19,20 @@ class TransactionRepository extends ServiceEntityRepository
         parent::__construct($registry, Transaction::class);
     }
 
+    public function addTransaction($date, $montant, $type, $numero, $commentaire, $reservation, $client){
+        $sql = "INSERT INTO transaction VALUES (null, :Date, :Montant, :Type, :Numero, :Commentaire, :Reservation, :Client)";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        return $stmt->execute(array(
+            ':Date'=>$date,
+            ':Montant'=>$montant,
+            ':Type'=>$type,
+            ':Numero'=>$numero,
+            ':Commentaire'=>$commentaire,
+            ':Reservation'=>$reservation,
+            ':Client'=>$client
+        ));
+    }
+
     // /**
     //  * @return Transaction[] Returns an array of Transaction objects
     //  */
