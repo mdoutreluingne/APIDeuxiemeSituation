@@ -22,7 +22,32 @@ use Doctrine\ORM\Mapping as ORM;
  *              }
  *          }
  *      }
- *    }
+ *    },
+ *    itemOperations={
+ *          "put",
+ *          "delete",
+ *          "get"={
+ *              "method"="GET",
+ *              "path"="/article/get/{id}",
+ *              "defaults"={"_api_receive"=false},
+ *              "controller"=App\Controller\GetArticleById::class,
+ *              "openapi_context"={
+ *                  "operationId"="getArticleById",
+ *                  "parameters"={
+ *                     {
+ *                          "name"="id",
+ *                          "required"=true,
+ *                          "type"="int",
+ *                          "in"="path",
+ *                          "description"="id de l'article"
+ *                      }
+ *                  },
+ *                  "produces"={
+ *                      "application/json"
+ *                  }
+ *              }
+ *          }
+ *     }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  */

@@ -31,6 +31,16 @@ class ArticleRepository extends ServiceEntityRepository
         return $stmt->fetchAll();
     }
 
+    public function getById($id)
+    {
+        $sql = "select * from article "
+            . "Where id = " . $id;
+
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */
