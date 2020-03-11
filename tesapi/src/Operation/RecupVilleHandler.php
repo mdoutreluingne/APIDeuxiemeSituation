@@ -18,6 +18,6 @@ class RecupVilleHandler
         $this->em = $em;
     }
     public function handle($nom){
-        return $this->em->getRepository('App:Ville')->findByNom($nom);
+        return $this->em->getRepository('App:Ville')->getVilleByNom($nom);
     }
 }

@@ -19,6 +19,14 @@ class VilleRepository extends ServiceEntityRepository
         parent::__construct($registry, Ville::class);
     }
 
+    public function getVilleByNom(string $nom)
+    {
+        $sql = "SELECT * FROM ville WHERE nom LIKE '".$nom."%'";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
     // /**
     //  * @return Ville[] Returns an array of Ville objects
     //  */
