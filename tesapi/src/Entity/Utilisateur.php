@@ -6,7 +6,54 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={"pagination_enabled"=false},
+ *      collectionOperations={
+ *          "get",
+ *          "addUtilisateur"={
+ *              "method"="POST",
+ *              "path"="/utilisateur/addUtilisateur/{login}/{mdp}/{role}/{client}",
+ *              "defaults"={"_api_receive"=false},
+ *              "controller"=App\Controller\AjoutUtilisateur::class,
+ *              "openapi_context"={
+ *                  "operationId"="postUtilisateur",
+ *                  "parameters"={
+ *                      {
+ *                          "name"="login",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Login du client"
+ *                      },
+ *                      {
+ *                          "name"="mdp",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Mot de passe du client"
+ *                      },
+ *                      {
+ *                          "name"="role",
+ *                          "required"=true,
+ *                          "type"="string",
+ *                          "in"="path",
+ *                          "description"="Role de l'utilisateur"
+ *                      },
+ *                      {
+ *                          "name"="client",
+ *                          "required"=true,
+ *                          "type"="int",
+ *                          "in"="path",
+ *                          "description"="Id du client"
+ *                      }
+ *                  },
+ *                  "produces"={
+ *                      "application/json"
+ *                  }
+ *              }
+ *          }
+ *     }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\UtilisateurRepository")
  */
 class Utilisateur

@@ -19,6 +19,18 @@ class UtilisateurRepository extends ServiceEntityRepository
         parent::__construct($registry, Utilisateur::class);
     }
 
+    public function addUtilisateur($login, $mdp, $role, $client){
+
+        $sql = "INSERT INTO utilisateur VALUES (:Login, :Mdp, :Role, :Client)";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        return ( $stmt->execute(array(
+            ':Login'=>$login,
+            ':Mdp'=>$mdp,
+            ':Role'=>$role,
+            ':Client'=>$client,
+        )));
+    }
+
     // /**
     //  * @return Utilisateur[] Returns an array of Utilisateur objects
     //  */
