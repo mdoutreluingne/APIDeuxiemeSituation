@@ -3,7 +3,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Utilisateur;
+use App\Entity\User;
 use App\Operation\AjoutUtilisateurHandler;
 
 class AjoutUtilisateur

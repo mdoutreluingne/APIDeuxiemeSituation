@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * @ApiResource(
@@ -12,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  *          "get",
  *          "addUtilisateur"={
  *              "method"="POST",
- *              "path"="/utilisateur/addUtilisateur/{login}/{mdp}/{role}/{client}",
+ *              "path"="/users/addUtilisateur/{login}/{mdp}/{role}/{client}",
  *              "defaults"={"_api_receive"=false},
  *              "controller"=App\Controller\AjoutUtilisateur::class,
  *              "openapi_context"={
@@ -54,27 +55,33 @@ use Doctrine\ORM\Mapping as ORM;
  *          }
  *     }
  * )
- * @ORM\Entity(repositoryClass="App\Repository\UtilisateurRepository")
+ * @ORM\Table(name="utilisateur")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class Utilisateur
+class User implements UserInterface
 {
-
     /**
      * @ORM\Id()
-     * @ORM\GeneratedValue("NONE")
-     * @ORM\Column(type="string", length=30)
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
-    private $login;
+    private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=180, unique=true, name="login")
      */
-    private $mdp;
+    private $username;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="json")
      */
-    private $role;
+    private $roles = [];
+
+    /**
+     * @var string The hashed password
+     * @ORM\Column(type="string", name="mdp")
+     */
+    private $password;
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\Client", cascade={"persist", "remove"})
@@ -82,40 +89,77 @@ class Utilisateur
      */
     private $client;
 
-    public function getLogin(): ?string
+    public function getId(): ?int
     {
-        return $this->login;
+        return $this->id;
     }
 
-    public function setLogin(string $login): self
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
     {
-        $this->login = $login;
+        return (string) $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
 
         return $this;
     }
 
-    public function getMdp(): ?string
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
     {
-        return $this->mdp;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = "";
+
+        return array_unique($roles);
     }
 
-    public function setMdp(string $mdp): self
+    public function setRoles(array $roles): self
     {
-        $this->mdp = $mdp;
+        $this->roles = $roles;
 
         return $this;
     }
 
-    public function getRole(): ?string
+    /**
+     * @see UserInterface
+     */
+    public function getPassword(): string
     {
-        return $this->role;
+        return (string) $this->password;
     }
 
-    public function setRole(string $role): self
+    public function setPassword(string $password): self
     {
-        $this->role = $role;
+        $this->password = $password;
 
         return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        // not needed when using the "bcrypt" algorithm in security.yaml
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 
     public function getClient(): ?Client

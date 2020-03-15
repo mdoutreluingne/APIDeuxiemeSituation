@@ -17,6 +17,6 @@ class AjoutUtilisateurHandler
         $this->em = $em;
     }
     public function handle($login, $mdp, $role, $client){
-        return $this->em->getRepository('App:Utilisateur')->addUtilisateur($login, $mdp, $role, $client);
+        return $this->em->getRepository('App:User')->addUtilisateur($login, $mdp, $role, $client);
     }
 }
