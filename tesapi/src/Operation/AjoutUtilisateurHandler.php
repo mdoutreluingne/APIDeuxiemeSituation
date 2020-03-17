@@ -3,21 +3,20 @@
 
 namespace App\Operation;
 
-
 use Doctrine\Persistence\ManagerRegistry;
 
-class RecupVilleHandler
+class AjoutUtilisateurHandler
 {
     protected $em;
     /**
-     * RecupVilleHandler constructor.
+     * RecupAvisHandler constructor.
      * @param ManagerRegistry $em
      */
     public function __construct(ManagerRegistry $em)
     {
         $this->em = $em;
     }
-    public function handle($nom){
-        return $this->em->getRepository('App:Ville')->getVilleByNom($nom);
+    public function handle($login, $mdp, $role, $client){
+        return $this->em->getRepository('App:User')->addUtilisateur($login, $mdp, $role, $client);
     }
 }

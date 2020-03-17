@@ -54,25 +54,25 @@ class Image
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Salle")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $salle;
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\Theme", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $theme;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Partie")
-     * @ORM\JoinColumn(name="partie_id", referencedColumnName="reservation", nullable=false)
+     * @ORM\JoinColumn(name="partie_id", referencedColumnName="reservation", nullable=true)
      */
     private $partie;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Article")
-     * @ORM\JoinColumn(name="article_id", referencedColumnName="id", nullable=false)
+     * @ORM\JoinColumn(name="article_id", referencedColumnName="id", nullable=true)
      */
     private $article;
 
