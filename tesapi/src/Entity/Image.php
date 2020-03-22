@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  *      "get",
  *      "getImagesSalle"={
  *          "method"="GET",
- *          "path"="/themes/getImagesSalle",
+ *          "path"="/images/getImagesSalle",
  *          "defaults"={"_api_receive"=false},
  *          "controller"=App\Controller\RecupImagesSalle::class,
  *          "openapi_context"={
