@@ -24,7 +24,7 @@ class SalleRepository extends ServiceEntityRepository
     public function findSalles()
     {
         $sql = "select salle.id as salle_id, theme.nom as theme, ville.nom as ville, image.nom as image from salle "
-            . "Join ville on ville.id = theme_id "
+            . "Join ville on ville.id = ville_id "
             . "Join theme on theme.id = theme_id "
             . "Join image on image.id = salle.id "
             . "where salle.archive = 0 "
