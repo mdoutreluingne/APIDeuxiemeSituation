@@ -22,7 +22,7 @@ class ImageRepository extends ServiceEntityRepository
     public function findImagesSalle()
     {
         $sql = "select nom from image "
-            . "where partie_id is not null and article_id is null ";
+            . "where partie_id is not null and salle_id is not null and article_id is null ";
         $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
         $stmt->execute(array());
         return $stmt->fetchAll();
