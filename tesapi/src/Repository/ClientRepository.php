@@ -72,8 +72,6 @@ class ClientRepository extends ServiceEntityRepository
         }
         if ($mail == "{mail}" || $mail == ",") {
             $mail = $client[0]->getMail();
-        } elseif(strpos($mail, ",")){
-            $mail = str_replace(",",".",$mail);
         }
         if ($archive == "{archive}" || $archive == ",") {
             $archive = $client[0]->getArchive();

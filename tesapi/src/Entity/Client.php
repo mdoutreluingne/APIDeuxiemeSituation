@@ -90,65 +90,35 @@ use Doctrine\ORM\Mapping as ORM;
  *     },
  *     itemOperations={
  *          "get",
- *          "put",
  *          "delete",
  *          "modifClient"={
  *              "method"="PUT",
- *              "path"="/client/modifClient/{id}/{nom}/{prenom}/{ville}/{tel}/{mail}/{archive}",
+ *              "path"="/clients/modifclient",
  *              "defaults"={"_api_receive"=false},
+ *              "read"=false,
  *              "controller"=App\Controller\ModifClient::class,
- *             "openapi_context"={
- *                  "operationId"="getByTheme",
- *                  "parameters"={
- *                     {
- *                          "name"="id",
- *                          "required"=true,
- *                          "type"="int",
- *                          "in"="path",
- *                          "description"="id du client"
- *                      },
- *                      {
- *                           "name"="nom",
- *                          "required"=false,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="nom du client"
- *                      },
- *                      {
- *                          "name"="prenom",
- *                          "required"=false,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="prénom du client"
- *                      },
- *                      {
- *                          "name"="ville",
- *                          "required"=false,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="nom de la ville où habite le client"
- *                      },
- *                      {
- *                          "name"="tel",
- *                          "required"=false,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="numéro de téléphone du client"
- *                      },
- *                      {
- *                          "name"="mail",
- *                          "required"=false,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="e-mail du client"
- *                      },
- *                      {
- *                          "name"="archive",
- *                          "required"=false,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Le client est-il archivé"
+ *              "openapi_context"={
+ *                  "operationId"="modifclient",
+ *                   "requestBody" = {
+ *                     "content": {
+ *                         "application/json": {
+ *                             "schema": {
+ *                                 "type": "object",
+ *                                 "properties": {
+ *                                     "id": {"type": "int", "example": "3"},
+ *                                     "nom": {"type": "string", "example": "Giorno"},
+ *                                     "prenom": {"type": "string", "example": "Bernardo"},
+ *                                     "ville": {"type": "string", "example": "Annecy"},
+ *                                     "tel": {"type": "string", "example": "0783664072"},
+ *                                     "mail": {"type": "string", "example": "email@example.com"},
+ *                                     "archive": {"type": "string", "example": "0"}
+ *                                 },
+ *                               }
+ *                          }
  *                      }
+ *                  },
+ *                  "parameters" =
+ *                  {
  *                  },
  *                  "produces"={
  *                      "application/json"
