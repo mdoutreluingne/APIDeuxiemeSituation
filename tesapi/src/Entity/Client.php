@@ -33,54 +33,31 @@ use Doctrine\ORM\Mapping as ORM;
  *          },
  *          "addClient"={
  *              "method"="POST",
- *              "path"="/client/addClient/{nom}/{prenom}/{ville}/{tel}/{mail}/{archive}",
+ *              "path"="/clients/addClient",
  *              "defaults"={"_api_receive"=false},
+ *              "read"=false,
  *              "controller"=App\Controller\AjoutClient::class,
  *              "openapi_context"={
- *                  "operationId"="postClient",
- *                  "parameters"={
- *                      {
- *                          "name"="nom",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Nom du client"
- *                      },
- *                      {
- *                          "name"="prenom",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Prénom du client"
- *                      },
- *                      {
- *                          "name"="ville",
- *                          "required"=true,
- *                          "type"="date",
- *                          "in"="path",
- *                          "description"="Ville du client"
- *                      },
- *                      {
- *                          "name"="tel",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Téléphone du client"
- *                      },
- *                      {
- *                          "name"="mail",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Mail du client"
- *                      },
- *                      {
- *                          "name"="archive",
- *                          "required"=true,
- *                          "type"="bool",
- *                          "in"="path",
- *                          "description"="Le client est archivé ou non"
+ *                  "operationId"="addClient",
+ *                   "requestBody" = {
+ *                     "content": {
+ *                         "application/json": {
+ *                             "schema": {
+ *                                 "type": "object",
+ *                                 "properties": {
+ *                                     "nom": {"type": "string", "example": "Giorno"},
+ *                                     "prenom": {"type": "string", "example": "Bernardo"},
+ *                                     "ville": {"type": "string", "example": "Annecy"},
+ *                                     "tel": {"type": "string", "example": "0783664072"},
+ *                                     "mail": {"type": "string", "example": "email@example.com"},
+ *                                     "archive": {"type": "string", "example": "0"}
+ *                                 },
+ *                               }
+ *                          }
  *                      }
+ *                  },
+ *                  "parameters" =
+ *                  {
  *                  },
  *                  "produces"={
  *                      "application/json"

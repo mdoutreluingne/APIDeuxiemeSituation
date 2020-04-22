@@ -3,8 +3,9 @@
 
 namespace App\Controller;
 
-use App\Entity\Client;
 use App\Operation\AjoutClientHandler;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;@Route::class;
 
 class AjoutClient
 {
@@ -17,8 +18,10 @@ class AjoutClient
     {
         $this->recupHandler = $recupHandler;
     }
-    public function __invoke($nom, $prenom, $ville, $tel, $mail, $archive){
-        $mail = str_replace(",",".",$mail);
-        return $this->recupHandler->handle($nom, $prenom, $ville, $tel, $mail, $archive);
+    public function __invoke(Request $request){
+        $resu = json_decode($request->getContent(),true);
+        $entitie = $this->recupHandler->handle($resu['nom'], $resu['prenom'], $resu['ville'],
+            $resu['tel'], $resu['mail'], $resu['archive']);
+        return $entitie;
     }
 }
