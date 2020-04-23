@@ -13,33 +13,27 @@ use Doctrine\ORM\Mapping as ORM;
  *          "put",
  *          "modifConfiguration"={
  *              "method"="PUT",
- *              "path"="/configuration/modifConfiguration/{nbcommentaire}/{nbavis}/{notemini}",
+ *              "path"="/configuration/modifConfiguration",
  *              "defaults"={"_api_receive"=false},
  *              "controller"=App\Controller\ModifAvis::class,
  *              "openapi_context"={
- *                  "operationId"="modifNbAvis",
- *                  "parameters"={
- *                      {
- *                          "name"="nbcommentaire",
- *                          "required"=false,
- *                          "type"="int",
- *                          "in"="path",
- *                          "description"="le nombre de commentaire affiché aléatoirement"
- *                      },
- *                      {
- *                          "name"="nbavis",
- *                          "required"=false,
- *                          "type"="int",
- *                          "in"="path",
- *                          "description"="le nombre d'avis affiché aléatoirement"
- *                      },
- *                      {
- *                          "name"="notemini",
- *                          "required"=false,
- *                          "type"="int",
- *                          "in"="path",
- *                          "description"="la note minimale"
+ *                  "operationId"="modifclient",
+ *                   "requestBody" = {
+ *                     "content": {
+ *                         "application/json": {
+ *                             "schema": {
+ *                                 "type": "object",
+ *                                 "properties": {
+ *                                     "nbcommentaire": {"type": "int", "example": "3"},
+ *                                     "nbavis": {"type": "int", "example": "3"},
+ *                                     "notemini": {"type": "float", "example": "3.4"}
+ *                                 },
+ *                               }
+ *                          }
  *                      }
+ *                  },
+ *                  "parameters" =
+ *                  {
  *                  },
  *                  "produces"={
  *                      "application/json"
