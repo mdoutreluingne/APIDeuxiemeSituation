@@ -17,7 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
  *              "defaults"={"_api_receive"=false},
  *              "controller"=App\Controller\ModifAvis::class,
  *              "openapi_context"={
- *                  "operationId"="modifclient",
+ *                  "operationId"="modifconfiguration",
  *                   "requestBody" = {
  *                     "content": {
  *                         "application/json": {

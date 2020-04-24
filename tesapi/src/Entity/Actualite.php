@@ -12,52 +12,34 @@ use Doctrine\ORM\Mapping as ORM;
  *      "post",
  *      "addActualite"={
  *          "method"="POST",
- *          "path"="/actualites/addActualite/{titre}/{paragraphe}/{image}/{dateDebut}/{dateFin}",
+ *          "path"="/actualites/addActualite",
  *          "defaults"={"_api_receive"=false},
  *          "controller"=App\Controller\AjoutActualite::class,
  *          "openapi_context"={
- *              "operationId"="postActualite",
- *              "parameters"={
- *                  {
- *                      "name"="titre",
- *                      "required"=true,
- *                      "type"="string",
- *                      "in"="path",
- *                      "description"="titre de l'actu"
+ *                  "operationId"="addactualite",
+ *                   "requestBody" = {
+ *                     "content": {
+ *                         "application/json": {
+ *                             "schema": {
+ *                                 "type": "object",
+ *                                 "properties": {
+ *                                     "titre": {"type": "string", "example": "test"},
+ *                                     "paragraphe": {"type": "string", "example": "test"},
+ *                                     "image": {"type": "string", "example": "test.png"},
+ *                                     "datedebut": {"type": "datetime", "example": "2020-05-22 12:00:00"},
+ *                                     "datefin": {"type": "datetime", "example": "2020-05-23 12:00:00"}
+ *                                 },
+ *                               }
+ *                          }
+ *                      }
  *                  },
+ *                  "parameters" =
  *                  {
- *                      "name"="paragraphe",
- *                      "required"=true,
- *                      "type"="string",
- *                      "in"="path",
- *                      "description"="paragraphe"
  *                  },
- *                  {
- *                      "name"="dateDebut",
- *                      "required"=true,
- *                      "type"="date",
- *                      "in"="path",
- *                      "description"="date de début"
- *                  },
- *                  {
- *                      "name"="dateFin",
- *                      "required"=true,
- *                      "type"="date",
- *                      "in"="path",
- *                      "description"="date de fin"
- *                  },
- *                  {
- *                      "name"="image",
- *                      "required"=true,
- *                      "type"="string",
- *                      "in"="path",
- *                      "description"="l'image"
+ *                  "produces"={
+ *                      "application/json"
  *                  }
- *              },
- *              "produces"={
- *                  "application/json"
- *              }
- *          }
+ *             }
  *      },
  *     "countActualite"={
  *          "method"="GET",
