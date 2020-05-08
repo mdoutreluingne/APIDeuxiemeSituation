@@ -33,61 +33,31 @@ use Doctrine\ORM\Mapping as ORM;
  *      },
  *      "addTransaction"={
  *          "method"="POST",
- *          "path"="/transaction/addTransaction/{date}/{montant}/{type}/{numero}/{commentaire}/{reservation}/{client}",
+ *          "path"="/transaction/addTransaction",
+ *          "read"=false,
  *          "defaults"={"_api_receive"=false},
  *          "controller"=App\Controller\AjoutTransaction::class,
  *          "openapi_context"={
  *               "operationId"="postTransaction",
- *               "parameters"={
- *                  {
- *                      "name"="date",
- *                      "required"=true,
- *                      "type"="date",
- *                      "in"="path",
- *                      "description"="Date de la transaction"
+ *               "requestBody" = {
+ *                     "content": {
+ *                         "application/json": {
+ *                             "schema": {
+ *                                 "type": "object",
+ *                                 "properties": {
+ *                                     "date": {"type": "date", "example": "2020-07-15"},
+ *                                     "montant": {"type": "string", "example": "10"},
+ *                                     "type": {"type": "string", "example": "Carte Bancaire"},
+ *                                     "numero": {"type": "string", "example": " "},
+ *                                     "commentaire": {"type": "string", "example": "Transaction de test"},
+ *                                     "reservation": {"type": "string", "example": " "},
+ *                                     "client": {"type": "string", "example": "1"}
+ *                                 },
+ *                               }
+ *                          }
+ *                      }
  *                  },
- *                  {
- *                      "name"="montant",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Montant de la transaction"
- *                  },
- *                  {
- *                      "name"="type",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Type de la transaction"
- *                  },
- *                  {
- *                      "name"="numero",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Numéro de la transaction"
- *                  },
- *                  {
- *                      "name"="commentaire",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Commentaire de la transaction"
- *                  },
- *                   {
- *                      "name"="reservation",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Réservation de la transaction"
- *                  },
- *                  {
- *                      "name"="client",
- *                          "required"=true,
- *                          "type"="string",
- *                          "in"="path",
- *                          "description"="Client de la transaction"
- *                  }
+ *              "parameters"={
  *              },
  *              "produces"={
  *                  "application/json"
