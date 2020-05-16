@@ -86,7 +86,7 @@ class Actualite
     private $date_fin;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $image;
 
