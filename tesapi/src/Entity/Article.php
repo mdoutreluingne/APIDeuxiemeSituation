@@ -21,6 +21,18 @@ use Doctrine\ORM\Mapping as ORM;
  *                  "application/json"
  *              }
  *          }
+ *      },
+ *     "countArticles"={
+ *          "method"="GET",
+ *          "path"="/articles/countArticles",
+ *          "defaults"={"_api_receive"=true},
+ *          "controller"=App\Controller\RecupCountArticle::class,
+ *          "openapi_context"={
+ *              "operationId"="getCountArticles",
+ *              "produces"={
+ *                  "application/json"
+ *              }
+ *          }
  *      }
  *    },
  *    itemOperations={

@@ -23,12 +23,23 @@ class ArticleRepository extends ServiceEntityRepository
     {
         $sql = "select libelle, montant, image.nom as image from article "
             . "Join image on image.article_id = article.id "
+            . "where article.archive = 0 "
             . "group by libelle "
             . "order by libelle ASC ";
 
         $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
         $stmt->execute(array());
         return $stmt->fetchAll();
+    }
+
+    public function CountArticles()
+    {
+        return $this->createQueryBuilder('a')
+            ->select('count(a.id)')
+            ->Where('a.archive = 0')
+            ->getQuery()
+            ->getSingleScalarResult()
+            ;
     }
 
     public function getById($id)
